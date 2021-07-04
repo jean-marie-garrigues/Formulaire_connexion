@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(45deg,#fc466b, #3f5efb) no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arial, sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+form{
+    background: rgba(255,255,255,.3);
+    padding: 20px;
+    height: 600px;
+    width: 450px;
+    border-radius: 150px;
+    border-left: 1px solid rgba(255,255,255,.3);
+    border-top: 1px solid rgba(255,255,255,.3);
+    /* effet à ajouter */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0, .3);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2{
+    color: white;
+    opacity: .8;
+    padding-top: 0px;
+    text-shadow: 3px 3px 5px rgba(0,0,0, .4);
+    margin-bottom: 10px;
+    top: 20px;
+    font-size: 30px;
+}
+
+p{
+    color: white;
+    opacity: .8;
+    padding-top: 0px;
+    text-shadow: 3px 3px 5px rgba(0,0,0, .4);
+    margin-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: white;
+    opacity: .8;
+    padding-top: 0px;
+    text-shadow: 3px 3px 5px rgba(0,0,0, .4);
+}
+
+input{
+    background: transparent;
+    border: none;
+    border-left: 1px solid rgba(255,255,255, .3);
+    border-top:  1px solid rgba(255,255,255, .3);
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+/*    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    -moz-backdrop-filter: blur(4px);*/
+    box-shadow: 4px 4px 40px rgba(0,0,0, .2);
+    color: white;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0,0,0, .2);
+    transition: all .3s;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+::placeholder{
+    color: white;
+}
+
+td{
+font-size: 14px;
+color: rgba(255,255,255,.7);
+text-align: center;
+position: relative;
+}
+
+td.password{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.eye{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 23px;
+    height: 26px;
+    color: white;
+    transition: all .2s;
+    right: 8px;
+}
+
+img.eye:{
+    display: none;
+} 
+
+img.eye-off {
+    display: block;
+} 
+
+img.eye:hover,
+img.eye:focus{
+    cursor: pointer;
+}
+
+input[type="password"]:focus{
+    background: rgba(255,255,255, .2);
+    box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.3);    
+}
+
+input.update{
+    background: rgba(255,255,255,.2);
+    color: #ddd;
+    font-size: 14px;
+    transition: all .3s;
+    width: 150px;
+    margin-top: 30px;
+    height: 40px;
+}
+
+input.update:hover{
+    box-shadow: 2px 2px 20px rgba(0,0,0, .5);
+    cursor: pointer;
+}
+
+a{opacity: 1;}
+
+td.vmdp  {
+    width: 100px;
+}
+
+.drop{
+    background: rgba(255,255,255, .3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    position: absolute;
+    border-left: 1px solid rgba(255,255,255,.3);
+    border-top: 1px solid rgba(255,255,255,.3);
+    border-radius: 50px;
+    box-shadow: 10px 10px 60px -8px rgba(0,0,0, .2);
+}
+
+.drop-1{
+    height: 80px;
+    width: 80px;
+    top: 220px;
+    left: -40px;
+    z-index: -1;
+}
+
+.drop-2{
+    height: 80px;
+    width: 80px;
+    bottom: -50px;
+    left: 120px;
+
+}
+
+.drop-3{
+    height: 100px;
+    width: 100px;
+    bottom: 170px;
+    right: -50px;
+    z-index: -1;
+}
+
+.drop-4{
+    height: 120px;
+    width: 120px;
+    top: -60px;
+    right: 150px;
+}
+
+.drop-5{
+height: 60px;
+width: 60px;
+bottom: 250px;
+left: 100px;
+z-index: -1;
+}
+
+/* responsive */
+
+@media screen and (max-width: 520px) {
+    body{
+        overflow: hidden;
+        width: 100vw;
+        align-items: flex-start;
+        height: 100vh;
+    }
+
+    form{
+        width: 100vw;
+        height: 700px;
+    }
+
+    h2{
+        padding-top: -20px;
+    }
+    
+    .drop{
+        display: none;
+    }
+
+    .form{
+        width: 100%;
+    }
+}
